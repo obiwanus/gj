@@ -1,6 +1,6 @@
 @echo off
 
-pushd w:\editor
+pushd w:\gj
 
 set game_name=%1
 set Optimize=0
@@ -26,7 +26,7 @@ pushd build
 
 set FilesToCompile= ..\src\%game_name%\GJ_win32.cpp
 
-set run_compilation= cl -F%game_name%.exe -I..\src %OptimizeFlags% %CommonCompilerFlags% %FilesToCompile% /link %CommonLinkerFlags%
+set run_compilation= cl -Fe%game_name%.exe -I..\src %OptimizeFlags% %CommonCompilerFlags% %FilesToCompile% /link %CommonLinkerFlags%
 
 %run_compilation% || exit /b
 

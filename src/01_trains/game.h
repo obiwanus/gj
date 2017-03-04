@@ -13,6 +13,23 @@ struct Program_Memory {
   void *allocate(size_t);
 };
 
+enum Input_Button {
+  IB_mouse_left = 0,
+  IB_mouse_middle,
+  IB_mouse_right,
+
+  IB_up,
+  IB_down,
+  IB_left,
+  IB_right,
+
+  IB_shift,
+  IB_escape,
+  IB_key,
+
+  IB__COUNT,
+};
+
 struct User_Input {
   bool buttons[IB__COUNT];
   bool key_pressed;
@@ -44,7 +61,6 @@ struct Pixel_Buffer {
   void *memory;
 
   void allocate();
-  Rect get_rect();
 
   void draw_pixel(v2i, u32, bool);
 };
@@ -53,7 +69,7 @@ struct Program_State {
   int kWindowWidth;
   int kWindowHeight;
 
-  void init(Pixel_Buffer *);
+  void init(Program_Memory *, Pixel_Buffer *);
 };
 
 // ============================== Globals =====================================

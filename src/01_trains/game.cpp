@@ -14,8 +14,7 @@ void update_and_render(Program_State *state, User_Input *input) {
 
 }
 
-void Program_State::init(Program_Memory *memory, Pixel_Buffer *buffer,
-                         Raytrace_Work_Queue *queue) {
+void Program_State::init(Program_Memory *memory, Pixel_Buffer *buffer) {
   Program_State *state = this;
 
   state->kWindowWidth = 1500;

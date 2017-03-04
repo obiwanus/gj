@@ -2,6 +2,9 @@
 
 #include <intrin.h>
 #include "../GJ_base.h"
+#include "../common/GJ_math.h"
+
+#include "game.h"
 
 #include "game.cpp"
 
